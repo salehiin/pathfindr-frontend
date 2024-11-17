@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Elena Vargas",
+        "specialty": "Cultural Tours",
+        "experience": "8 years",
+        "image": "https://randomuser.me/api/portraits/women/45.jpg",
+        "bio": "Elena is a passionate cultural enthusiast with deep knowledge of art and heritage."
+    },
+    {
+        "id": 2,
+        "name": "David Morgan",
+        "specialty": "Adventure Trips",
+        "experience": "5 years",
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "bio": "David thrives in challenging terrains and is known for his expert guidance in adventure tours."
+    },
+    {
+        "id": 3,
+        "name": "Dr. Laura Simmons",
+        "specialty": "Wildlife Exploration",
+        "experience": "12 years",
+        "image": "https://randomuser.me/api/portraits/women/65.jpg",
+        "bio": "Dr. Laura is a wildlife biologist with a passion for nature and educating travelers."
+    },
+    {
+        "id": 4,
+        "name": "Keleto Vuni",
+        "specialty": "Beach & Coastal Tours",
+        "experience": "7 years",
+        "image": "https://randomuser.me/api/portraits/men/50.jpg",
+        "bio": "Keleto is a coastal guide who ensures travelers enjoy the best of seaside adventures."
+    },
+    {
+        "id": 5,
+        "name": "Sofia Antoniou",
+        "specialty": "Historical Tours",
+        "experience": "10 years",
+        "image": "https://randomuser.me/api/portraits/women/30.jpg",
+        "bio": "Sofia is a history expert who brings ancient tales and civilizations to life during tours."
+    },
+    {
+        "id": 6,
+        "name": "Bruce Nolan",
+        "specialty": "City Exploration",
+        "experience": "6 years",
+        "image": "https://randomuser.me/api/portraits/men/43.jpg",
+        "bio": "Bruce specializes in urban tours, showing hidden gems and iconic landmarks with enthusiasm."
+    }
+]
