@@ -9,10 +9,10 @@ const Guides = () => {
     useEffect(() =>{
         fetch('guides.json')
         .then(res => res.json())
-        .then(data =>{
-            const tourGuide = data.map(guide => (guide));
-            setGuide(tourGuide);
-        })
+        .then(data => setGuide(data)
+            // { const tourGuide = data.map(guide => (guide));
+            // setGuide(tourGuide);}
+            )
     }, [])
 
     return (

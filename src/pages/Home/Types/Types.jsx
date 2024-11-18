@@ -4,34 +4,46 @@ import t1 from "../../../assets/t1.jpg";
 import t2 from "../../../assets/t2.jpg";
 import t3 from "../../../assets/t3.jpg";
 import t4 from "../../../assets/t4.jpg";
+import usePackage from '../../../hooks/usePackage';
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const Types = () => {
+
+    
+
+    const [tourPackage] = usePackage();
+    // const wildlife = tourPackage.filter(item => item.tourType === 'Wildlife');
+    // const Cultural = tourPackage.filter(item => item.tourType === 'Cultural');
+    // const Adventure = tourPackage.filter(item => item.tourType === 'Adventure');
+    // const Historical = tourPackage.filter(item => item.tourType === 'Historical');
+
     return (
         <div className="grid grid-cols-4 grid-rows-4 gap-2 h-screen">
-            <div className="col-start-1 col-end-3 row-start-1 row-end-5">
+            <Link to="/wildlife" className="col-start-1 col-end-3 row-start-1 row-end-5">
                 <Type 
                 image={t1}
                 tourTypes={"Nature & Wildlife"}
                 ></Type>
-            </div>
-            <div className="col-start-3 col-end-4 row-start-1 row-end-3">
+            </Link>
+            <Link to="cultural" className="col-start-3 col-end-4 row-start-1 row-end-3">
                 <Type 
                 image={t2}
                 tourTypes={"Sightseeing"}
                 ></Type>
-            </div>
-            <div className="col-start-4 col-end-5 row-start-1 row-end-3">
+            </Link>
+            <Link to="adventure" className="col-start-4 col-end-5 row-start-1 row-end-3">
                 <Type 
                 image={t3}
                 tourTypes={"Adventure"}
                 ></Type>
-            </div>
-            <div className="col-start-3 col-end-5 row-start-3 row-end-5">
+            </Link>
+            <Link to="historical" className="col-start-3 col-end-5 row-start-3 row-end-5">
                 <Type 
                 image={t4}
                 tourTypes={"Cultural & Historical"}
                 ></Type>
-            </div>
+            </Link>
         </div>
     );
 };

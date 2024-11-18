@@ -1,9 +1,10 @@
 import { FaHeartCirclePlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const Package = ({ item }) => {
+const Wildlife = ({ item }) => {
 
     const { tourType, tripTitle, cost, image } = item;
+    // const { tourType } = useParams();
 
     return (
 
@@ -32,4 +33,4 @@ const Package = ({ item }) => {
     );
 };
 
-export default Package;
+export default Wildlife;

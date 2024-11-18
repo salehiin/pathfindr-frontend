@@ -1,7 +1,7 @@
 import { FaHeartCirclePlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const Package = ({ item }) => {
+const Cultural = ({ item }) => {
 
     const { tourType, tripTitle, cost, image } = item;
 
@@ -10,8 +10,7 @@ const Package = ({ item }) => {
 
         <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto">
             <div className="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md text-black" style={{ backgroundImage: `url(${image})`, }}>
-            {/* backgroundImage: "url(https://images.unsplash.com/photo-1521903062400-b80f2cb8cb9d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80)" */}
-                <p className="p-2">{tripTitle}</p>
+               <p className="p-2">{tripTitle}</p>
             </div>
 
             <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
@@ -32,4 +31,4 @@ const Package = ({ item }) => {
     );
 };
 
-export default Package;
+export default Cultural;

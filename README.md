@@ -1,13 +1,20 @@
 
+# Github frontend - https://github.com/salehiin/pathfindr-frontend.git
+
 # Background: #f0f3bd (Soft Lemon) 
 # Primary: #02c39a (Teal Green)
 # Secondary: #450920 (Burgundy)
+# 2591b1
 
 
 
 # 64.2 - 
 # 64.3 - banner over navbar
 # 64.4 -
+
+# 65.1 - 
+# 65.3 -
+# 65.4 -02:40
 
 
 
