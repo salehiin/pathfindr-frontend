@@ -15,6 +15,11 @@
 # 65.1 - 
 # 65.3 -
 # 65.4 -02:40
+# 65.6
+# 65.7 - 05:30
+# 65.8 
+# 65.9
+# 66.4
 
 
 
@@ -67,3 +72,6 @@ provide another slogan and paragraph like above
 # https://i.ibb.co.com/jrbwzLT/pexels-uriel-mont-6271696.jpg
 # https://i.ibb.co.com/F5bmPrG/pexels-uriel-mont-6271690.jpg
 # https://i.ibb.co.com/LggCVdd/b6.jpg
+
+# mongodb - https://cloud.mongodb.com/v2/662878dd7ece427517232bb1#/metrics/replicaSet/66287c80f1c5cc0e5905c134/explorer/pathfindrDB/guides/find
+# https://www.mongodb.com/docs/drivers/node/upcoming/fundamentals/crud/

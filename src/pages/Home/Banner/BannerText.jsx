@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BannerText = () => {
     return (
@@ -9,7 +10,7 @@ const BannerText = () => {
                     <p className="mb-5 text-[#02c39a] pr-28">
                     Your journey begins here. Explore handpicked destinations, connect with experienced locals, and create memories that last a lifetime. Discover hidden gems, embrace new cultures, and embark on adventures tailored just for you.
                     </p>
-                    <button className="btn text-white bg-[#2591b1] hover:bg-transparent">Get Started</button>
+                    <Link to="/category" className="btn text-white bg-[#2591b1] hover:bg-transparent">Reserve Now</Link>
                 </div>
             </div>
         

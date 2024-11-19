@@ -11,6 +11,9 @@ import Category from "../pages/Category/Category";
 import Culturals from "../pages/Category/Cultural/Culturals";
 import Adventures from "../pages/Category/Adventure/Adventures";
 import Historicals from "../pages/Category/Historical/Historicals";
+import Reservation from "../pages/Reservation/Reservation/Reservation";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 
@@ -22,6 +25,14 @@ export const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path: '/login',
+            element: <Login></Login>
+        },
+        {
+            path: '/register',
+            element: <Register></Register>
         },
         {
             path: '/category',

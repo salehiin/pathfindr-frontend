@@ -1,25 +1,30 @@
 import { Link } from "react-router-dom";
+import Category from "../../Category/Category";
 
 
 const NavBar = () => {
 
     const navOptions = <>
-        <li><a>Item 1</a></li>
+        <li><Link>Home</Link></li>
         <li>
             <details>
-                <summary>Parent</summary>
+                <summary><Link to="Category">Packages</Link></summary>
                 <ul className="p-2">
                     <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                    <li><a>Submenu 2</a></li>
+                    <li><a>Submenu 2</a></li>
                     <li><a>Submenu 2</a></li>
                 </ul>
             </details>
         </li>
-        <li><a>Item 3</a></li>
+        <li><Link to="/reservation" >Reserve</Link></li>
+        <li><Link to="/" ></Link></li>
     </>
 
     return (
         <>
-            <div className="navbar fixed bg-opacity-10 max-w-screen-xl bg-[#f0f3bd]">
+            <div className="navbar bg-transparent  max-w-screen-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,11 +55,12 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn  text-[#02c39a] btn-outline hover:bg-[#2591b1] hover:text-white">Button</a>
+                    <Link to="/login" className="btn  text-[#02c39a] btn-outline hover:bg-[#2591b1] hover:text-white">Login</Link>
                 </div>
             </div>
         </>
     );
+    // bg-[#f0f3bd]
 
 };
 

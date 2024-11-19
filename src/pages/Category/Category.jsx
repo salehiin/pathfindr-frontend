@@ -12,7 +12,7 @@ const Category = () => {
 
 
     return (
-        <div className="flex flex-wrap gap-6 justify-between">
+        <div className="flex flex-wrap gap-6 justify-between py-24">
              
                 {
                     filteredTours.map(item => <Wildlife

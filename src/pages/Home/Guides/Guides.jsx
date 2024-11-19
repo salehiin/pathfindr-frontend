@@ -7,7 +7,7 @@ const Guides = () => {
     const [guide, setGuide] = useState([]);
 
     useEffect(() =>{
-        fetch('guides.json')
+        fetch('http://localhost:5000/guides')
         .then(res => res.json())
         .then(data => setGuide(data)
             // { const tourGuide = data.map(guide => (guide));

@@ -6,7 +6,7 @@ const usePackage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('tourpackage.json')
+        fetch('http://localhost:5000/packages')
             .then(res => res.json())
             .then(data => {
                 
