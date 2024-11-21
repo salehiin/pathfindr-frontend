@@ -2,11 +2,13 @@ import Swal from "sweetalert2";
 import useCart from "../../../hooks/useCart";
 import CartTableRowData from "./CartTableRowData";
 import { BsTrash3 } from "react-icons/bs";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 
 const Cart = () => {
-    const [cart] = useCart();
+    const [cart, refetch] = useCart();
     const totalCost = cart.reduce((total, item) => total + item.cost, 0);
+    const axiosSecure = useAxiosSecure();
 
     const handleDelete = id => {
         Swal.fire({
@@ -19,11 +21,18 @@ const Cart = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                // Swal.fire({
-                //     title: "Deleted!",
-                //     text: "Your file has been deleted.",
-                //     icon: "success"
-                // });
+
+                axiosSecure.delete(`/carts/${id}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
             }
         });
     }

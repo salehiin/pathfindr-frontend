@@ -7,9 +7,11 @@ import { TbHeartCog } from "react-icons/tb";
 import { BsPersonHearts } from "react-icons/bs";
 import { PiListHeartThin } from "react-icons/pi";
 import { ImHome } from "react-icons/im";
+import useCart from "../hooks/useCart";
 
 
 const Dashboard = () => {
+    const [cart] = useCart();
     return (
         <div className="flex">
             {/* dashboard side bar */}
@@ -30,7 +32,7 @@ const Dashboard = () => {
                     <li>
                         <NavLink to="/dashboard/cart">
                             <TbShoppingCartHeart />
-                            My Cart</NavLink>
+                            My Cart ({cart.length})</NavLink>
                     </li>
                     <li>
                         <NavLink to="/dashboard/review">
