@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
 import Category from "../../Category/Category";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
+
 
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
 
     const navOptions = <>
         <li><Link>Home</Link></li>
@@ -44,18 +54,28 @@ const NavBar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#02c39a]">
-                                {navOptions}
+                            {navOptions}
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl text-[#02c39a]">Pathfindr</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-[#02c39a]">
-                                {navOptions}
+                        {navOptions}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login" className="btn  text-[#02c39a] btn-outline hover:bg-[#2591b1] hover:text-white">Login</Link>
+
+                    {
+                        user ? <>
+                            <span>{user?.displayName}</span>
+                            <img className="w-8" src={user?.photoURL} alt="" />
+                            <button onClick={handleLogOut} className="btn text-[#2591b1]">Logout</button>
+                        </> : <>
+                            <Link to="/login" className="btn  text-[#02c39a] btn-outline hover:bg-[#2591b1] hover:text-white">Login</Link>
+
+                        </>
+                    }
                 </div>
             </div>
         </>

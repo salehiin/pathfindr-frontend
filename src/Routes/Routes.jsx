@@ -14,6 +14,8 @@ import Historicals from "../pages/Category/Historical/Historicals";
 import Reservation from "../pages/Reservation/Reservation/Reservation";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../pages/Shared/Secret/Secret";
 
 
 
@@ -58,6 +60,10 @@ export const router = createBrowserRouter([
             path: '/reservation',
             element: <Reservation></Reservation>
         },
+        {
+            path: 'secret',
+            element: <PrivateRoute><Secret></Secret></PrivateRoute>
+        }
       ]
     },
   ]);
