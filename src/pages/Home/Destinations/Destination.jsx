@@ -6,6 +6,9 @@ import t3 from "../../../assets/t3.jpg";
 
 
 const Destination = ({image, title, details}) => {
+
+    
+
     return (
         <div className="max-w-[900px] gap-1 grid grid-cols-4 grid-rows-1 mt-10">
             <Card className="container group relative col-span-12 sm:col-span-4 min-h-[400px] overflow-hidden rounded-2xl">

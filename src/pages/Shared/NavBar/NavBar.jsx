@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import Category from "../../Category/Category";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { FaCartFlatbedSuitcase } from "react-icons/fa6";
+import useCart from "../../../hooks/useCart";
 
 
 
 const NavBar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+    const [cart] = useCart();
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -29,7 +32,12 @@ const NavBar = () => {
             </details>
         </li>
         <li><Link to="/reservation" >Reserve</Link></li>
-        <li><Link to="/" ></Link></li>
+        <li className=""><Link to="/" >
+            <button className="btn">
+                <FaCartFlatbedSuitcase />
+                <div className="badge badge-secondary">+{cart.length}</div>
+            </button>
+        </Link></li>
     </>
 
     return (
@@ -53,7 +61,7 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#02c39a]">
+                            className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-[#02c39a]">
                             {navOptions}
                         </ul>
                     </div>
