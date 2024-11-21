@@ -5,6 +5,7 @@ import useAuth from "../../../hooks/useAuth";
 // import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useCart from "../../../hooks/useCart";
 
 const Package = ({ item }) => {
 
@@ -13,13 +14,14 @@ const Package = ({ item }) => {
     const navigate = useNavigate();
     const location = useLocation();
     const axiosSecure = useAxiosSecure();
+    const [, refetch] = useCart();
 
 
-    const handleAddToCart = tour => {
+    const handleAddToCart = () => {
         // console.log(tour, user.email);
         if (user && user.email) {
             // send cart item to the database
-            console.log(user.email, tour);
+            // console.log(user.email, tour);
             const cartItem = {
                 tourId: _id,
                 email: user.email,
@@ -39,6 +41,8 @@ const Package = ({ item }) => {
                         showConfirmButton: false,
                         timer: 1500
                       });
+                    //   refetch cart to update cart items
+                    refetch();
                 }
             })
         }
@@ -72,7 +76,7 @@ const Package = ({ item }) => {
             <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
                 <div className="py-2 flex items-center justify-evenly">
                     <h3 className="font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white ">{tourType}</h3>
-                    <FaHeartCirclePlus className="text-secondary" onClick={() => handleAddToCart(item)} />
+                    <FaHeartCirclePlus className="text-secondary" onClick={handleAddToCart} />
 
 
                 </div>
