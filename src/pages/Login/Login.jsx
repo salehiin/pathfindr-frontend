@@ -3,6 +3,7 @@ import login from "../../assets/login.jpg";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
+import SocialLogin from "../Shared/Components/SocialLogin/SocialLogin";
 
 
 
@@ -53,7 +54,7 @@ const Login = () => {
                 <img
                     src={login}
                     className="max-w-lg rounded-lg shadow-2xl" />
-                <div className="text-center mx-auto">
+                <div className="text-center mx-auto ">
                     <div className="text-center py-8">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         {/* <p className="py-6">
@@ -61,7 +62,7 @@ const Login = () => {
                             quasi. In deleniti eaque aut repudiandae et a id nisi.
                         </p> */}
                     </div>
-                    <div className="card bg-base-100 w-full max-w-md shadow-2xl">
+                    <div className="card bg-base-100 w-full max-w-md shadow-2xl pb-5">
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -81,8 +82,10 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-accent" type="submit" value="login" />
                             </div>
+                            
                         </form>
-                        <p><small>New Here? <Link to="/register">Create an account</Link></small></p>
+                        <SocialLogin></SocialLogin>
+                        <p className="px-6"><small>New Here? <Link to="/register">Create an account</Link></small></p>
                     </div>
                 </div>
             </div>
