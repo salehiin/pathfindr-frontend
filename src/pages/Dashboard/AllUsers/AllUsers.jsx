@@ -3,16 +3,22 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { BsTrash3 } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa6";
 import Swal from "sweetalert2";
+// import { useContext } from "react";
+// import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const AllUsers = () => {
+    // const { user } = useContext(AuthContext);
+    // console.log(user);
     const axiosSecure = useAxiosSecure();
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await axiosSecure.get('/users');
             return res.data;
+            
         }
+        
     })
 
     const handleMakeAdmin = user => {
@@ -57,8 +63,9 @@ const AllUsers = () => {
                     })
             }
         });
-
+        
     }
+    
 
     return (
         <div>
@@ -95,8 +102,8 @@ const AllUsers = () => {
                                         <div className="avatar">
                                             <div className="mask mask-squircle h-12 w-12">
                                                 <img
-                                                    src={user?.photoURL}
-                                                    alt="Avatar Tailwind CSS Component" />
+                                                    src={user?.photoURL || "https://via.placeholder.com/150"}
+                                                    alt={`${user.name}`} />
                                             </div>
                                         </div>
                                         <div>
