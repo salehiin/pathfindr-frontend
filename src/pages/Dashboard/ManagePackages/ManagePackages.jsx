@@ -5,6 +5,7 @@ import { FaUsers } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 
 const ManagePackages = () => {
@@ -20,11 +21,11 @@ const ManagePackages = () => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-        }).then( async (result) => {
+        }).then(async (result) => {
             if (result.isConfirmed) {
                 const res = await axiosSecure.delete(`/packages/${item._id}`);
                 // console.log(res.data);
-                if(res.data.deletedCount > 0){
+                if (res.data.deletedCount > 0) {
                     // refetch to update the UI
                     refetch();
                     Swal.fire({
@@ -33,7 +34,7 @@ const ManagePackages = () => {
                         title: `${item.name} has been deleted`,
                         showConfirmButton: false,
                         timer: 1500
-                      });
+                    });
                 }
                 // Swal.fire({
                 //     title: "Deleted!",
@@ -91,10 +92,13 @@ const ManagePackages = () => {
                                     </td>
                                     <td className="text-accent">$ {item.cost}</td>
                                     <td>
-                                        <button
-                                            // onClick={() => handleMakeAdmin(user)}
-                                            className="btn btn-ghost btn-xs font-bold"><FaEdit className="text-accent" />
-                                        </button>
+                                        <Link to={`/dashboard/updatePackage/${item._id}`}>
+                                            <button
+                                                // onClick={() => handleMakeAdmin(user)}
+                                                className="btn btn-ghost btn-xs font-bold"><FaEdit className="text-accent" />
+                                            </button>
+                                        </Link>
+
                                     </td>
                                     <td>
                                         <td>

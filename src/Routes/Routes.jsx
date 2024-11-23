@@ -19,9 +19,10 @@ import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../pages/Dashboard/Cart/Cart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
-import AddPackages from "../pages/Dashboard/AddPackagesAddPackages/AddPackages";
+import AddPackages from "../pages/Dashboard/AddPackages/AddPackages";
 import AdminRoute from "./AdminRoute";
 import ManagePackages from "../pages/Dashboard/ManagePackages/ManagePackages";
+import UpdatePackage from "../pages/Dashboard/UpdatePackage/UpdatePackage";
 
 
 
@@ -89,6 +90,11 @@ export const router = createBrowserRouter([
             {
                 path: 'managePackages',
                 element: <AdminRoute><ManagePackages></ManagePackages></AdminRoute>
+            },
+            {
+                path: 'updatePackage/:id',
+                element: <AdminRoute><UpdatePackage></UpdatePackage></AdminRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/packages/${params.id}`)
             },
             {
                 path: 'users',

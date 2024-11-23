@@ -42,6 +42,7 @@ https://www.mongodb.com/docs/drivers/node/current/usage-examples/
 
 # 69.1
 # 69.7
+# 69.8 - navigate to particular route(01:00)
 
 # formik.org
 
