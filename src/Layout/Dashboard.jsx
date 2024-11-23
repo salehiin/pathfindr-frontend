@@ -9,6 +9,7 @@ import { PiListHeartThin, PiListHeartFill, PiUsersThreeThin  } from "react-icons
 import { ImHome, ImUsers  } from "react-icons/im";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
+import { MdContactPhone } from "react-icons/md";
 
 
 const Dashboard = () => {
@@ -33,7 +34,7 @@ const Dashboard = () => {
                                     Admin Home</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/addItems">
+                                <NavLink to="/dashboard/addPackages">
                                 <TbCameraHeart />
                                     {/* <LuCalendarHeart /> */}
                                     Add Packages</NavLink>
@@ -125,7 +126,7 @@ const Dashboard = () => {
                     <li>
 
                         <NavLink to="/contact">
-                            <ImHome />
+                        <MdContactPhone />
                             {/* <MdHomeRepairService /> */}
                             Contact</NavLink>
                     </li>
