@@ -3,6 +3,7 @@ import useCart from "../../../hooks/useCart";
 import CartTableRowData from "./CartTableRowData";
 import { BsTrash3 } from "react-icons/bs";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
@@ -42,7 +43,7 @@ const Cart = () => {
             <div className="flex justify-evenly">
                 <h2 className="text-4xl">Packages: {cart.length}</h2>
                 <h2 className="text-4xl">Total Cost: {totalCost}</h2>
-                <button className="btn btn-accent">Checkout</button>
+                {cart.length ? <Link to="/dashboard/checkout" className="btn btn-accent">Checkout</Link> : <Link to="/dashboard/checkout" disabled={!cart.length} className="btn btn-accent">Checkout</Link>}
             </div>
             <div className="overflow-x-auto">
                 <table className="table">

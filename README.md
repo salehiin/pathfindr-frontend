@@ -44,6 +44,18 @@ https://www.mongodb.com/docs/drivers/node/current/usage-examples/
 # 69.7
 # 69.8 - navigate to particular route(01:00)
 
+# 70.1 - lottery at last
+# 70.2 
+https://docs.stripe.com/sdks/stripejs-react
+
+# 70.3
+# 70.4
+# 70.5 - 03:00
+# 70.8 - 
+
+# 71.1 - 
+# 71.3 -
+
 # formik.org
 
 

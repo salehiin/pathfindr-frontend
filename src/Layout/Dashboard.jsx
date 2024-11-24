@@ -93,10 +93,10 @@ const Dashboard = () => {
                                         Add a Review</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/bookings">
+                                    <NavLink to="/dashboard/paymentHistory">
                                         <PiListHeartThin />
                                         {/* <BsPersonHearts /> */}
-                                        My Bookings</NavLink>
+                                        Payment History</NavLink>
                                 </li>
                             </>
                     }

@@ -23,6 +23,10 @@ import AddPackages from "../pages/Dashboard/AddPackages/AddPackages";
 import AdminRoute from "./AdminRoute";
 import ManagePackages from "../pages/Dashboard/ManagePackages/ManagePackages";
 import UpdatePackage from "../pages/Dashboard/UpdatePackage/UpdatePackage";
+import Payment from "../pages/Dashboard/Payment/Payment";
+import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 
 
 
@@ -77,12 +81,28 @@ export const router = createBrowserRouter([
         path: 'dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
-            // normal userroutes
+            // normal user routes
+            {
+                path: 'userHome',
+                element: <UserHome></UserHome>
+            },
             {
                 path: 'cart',
                 element: <Cart></Cart>
             },
+            {
+                path: 'checkout',
+                element: <Payment></Payment>
+            },
+            {
+                path: 'paymentHistory',
+                element: <PaymentHistory></PaymentHistory>
+            },
             // admin only routes
+            {
+                path: 'adminHome',
+                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+            },
             {
                 path: 'addPackages',
                 element: <AdminRoute><AddPackages></AddPackages></AdminRoute>
