@@ -55,6 +55,8 @@ https://docs.stripe.com/sdks/stripejs-react
 
 # 71.1 - 
 # 71.3 -
+# 71.4 - 03:00
+# 71.4 - 07:00 
 
 # formik.org
 
@@ -112,3 +114,18 @@ provide another slogan and paragraph like above
 
 # mongodb - https://cloud.mongodb.com/v2/662878dd7ece427517232bb1#/metrics/replicaSet/66287c80f1c5cc0e5905c134/explorer/pathfindrDB/guides/find
 # https://www.mongodb.com/docs/drivers/node/upcoming/fundamentals/crud/
+
+
+
+
+# 71.7 - chart
+
+# 71.8 - 03:50
+
+Vercel
+https://pathfindr-server.vercel.app/packages
+<!-- http://localhost:5000 -->
+
+https://pathfindr-ea671.web.app/
+
+nextJs, redux, typescript

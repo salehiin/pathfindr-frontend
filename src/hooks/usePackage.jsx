@@ -10,7 +10,7 @@ const usePackage = () => {
     // const [loading, setLoading] = useState(true);
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/packages')
+    //     fetch('https://pathfindr-server.vercel.app/packages')
     //         .then(res => res.json())
     //         .then(data => {
                 

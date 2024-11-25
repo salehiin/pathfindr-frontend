@@ -114,7 +114,7 @@ export const router = createBrowserRouter([
             {
                 path: 'updatePackage/:id',
                 element: <AdminRoute><UpdatePackage></UpdatePackage></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/packages/${params.id}`)
+                loader: ({params}) => fetch(`https://pathfindr-server.vercel.app/packages/${params.id}`)
             },
             {
                 path: 'users',
